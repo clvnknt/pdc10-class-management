@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <title>Class Management</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Class Management</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../classes/index.php">Classes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../teachers/index.php">Teachers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../students/index.php">Students</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../class-roster/index.php">Class Roster</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="p-3 mb-2">
+        <form method="POST" action="../class-roster/add.php?class_code={{class_code}}">
+            <h4 class="fw-bold">Add Student to a Class Roster</h4>
+    <input type="hidden" name="class_code" id="class_code" value="{{class_code}}"/>
+                <select name="student_number" id="student_number" class="form-control form-control-lg" required>
+                <label for="student_number" class="form-label">Pick One Student</label>
+                <option value="" selected="true" disabled="disabled" hidden>Select Student</option>
+                 {{# showStudents }}
+                  <option value="{{student_number}}">{{first_name}} {{last_name}}</option>
+                  {{/ showStudents }}
+                </select>
+                <br>
+            <button id="submit" type="submit" class="btn btn-primary">Add Student</button>
+            <button type="button" class="btn btn-danger" href="../class-roster/index.php">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>

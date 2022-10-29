@@ -1,0 +1,52 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>128</x><y>344</y><w>360</w><h>152</h></coordinates><panel_attributes>Classes
+--
+#id: int
+#name: string
+#code: string
+#description: string
+#teacher_id: int
+--
++showClasses()
++addClasses(name, code, description, teacher_id)
++updateClasses(name, code, description, teacher_id)
++deleteClasses()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>144</x><y>64</y><w>400</w><h>184</h></coordinates><panel_attributes>Teacher
+--
+#teacher_id: id
+#first_name: string
+#last_name: string
+#email: string
+#contact_number: string
+#employee_number: string
+--
++displayTeacher()
++addTeacher(first_name, last_name, email, contact_number, employee_number)
++Update Teacher(first_name, last_name, email, contact_number, employee_number)
++deleteTeacher()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>592</x><y>72</y><w>448</w><h>176</h></coordinates><panel_attributes>Student
+--
+#id:int
+#first_name:string
+#last_name:string
+#student_number:string
+#email:string
+#contact_number:string
+#program:string
+--
++displayStudent()
++addStudent(first_name, last_name, student_number, email, contact_number, program)
++updateStudent(first_name, last_name, student_number, email, contact_number, program)
++deleteStudent()
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>416</y><w>136</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>664</x><y>240</y><w>24</w><h>128</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>352</y><w>304</w><h>152</h></coordinates><panel_attributes>Class Roster
+--
+#class_code
+#student_number
+#enrolled_at
+--
++showClassRecord()
++addStudentClass()
++deleteStudentClass()
++exportStudentClass()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>240</y><w>24</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element></diagram>
